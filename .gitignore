@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Spark
+metastore_db/
+derby.log
+spark-warehouse/
+*.crc
+_SUCCESS
+
+# OS / editor
+.DS_Store
+.vscode/
+*.swp
+
+# Generated output (keep the folder, ignore stale runs if you prefer)
+# outputs/at_risk_students.csv
