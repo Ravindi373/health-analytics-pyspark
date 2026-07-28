@@ -52,7 +52,7 @@ health-analytics-pyspark/
    ```
 2. Clone the repo and open it in VS Code:
    ```bash
-   git clone <your-repo-url>
+   git clone <my-repo-url>
    cd health-analytics-pyspark
    code .
    ```
@@ -79,7 +79,7 @@ final at-risk student list to `outputs/at_risk_students.csv`.
 
 ## Findings
 
-**Cleaning strategy** — Zero values in height, weight, and cholesterol are
+**Cleaning strategy** - Zero values in height, weight, and cholesterol are
 physically impossible for a living person, so they were treated as missing
 data rather than genuine measurements. Rather than dropping rows (which
 would shrink an already small 100-row sample), missing values were imputed
@@ -88,24 +88,24 @@ metrics vary meaningfully by gender and, to a lesser extent, by
 department/lifestyle. Any group with no valid values at all falls back to
 the global column mean.
 
-**Department with the highest average BMI** — DS (Data Science), at
+**Department with the highest average BMI** - DS (Data Science), at
 ~25.6, narrowly ahead of IT (~25.0) and CS (~24.2). The gap is small
 enough that it may simply reflect this dataset's sample rather than a
 strong underlying pattern, but it's worth watching if it holds across a
 larger sample.
 
-**Department with the most at-risk students** — DS has the highest
+**Department with the most at-risk students** - DS has the highest
 at-risk rate (100% of its 30 students meet at least one risk criterion),
 with IT close behind (~97%) and CS somewhat lower (~95%). Because the
 at-risk definition is broad (any one of BMI, blood pressure, or
 cholesterol), these percentages are high across the board.
 
-**Highest-risk individual** — Student S018 (Kaveen, DS) has the highest
+**Highest-risk individual** - Student S018 (Kaveen, DS) has the highest
 BMI in the dataset (~39.8, Obese) combined with elevated blood pressure
 (150/87, meeting the high-BP threshold) and cholesterol above the 200
 mg/dL threshold — all three risk factors present at once.
 
-**Real-world use case** — A university health service could use this kind
+**Real-world use case** - A university health service could use this kind
 of pipeline to flag students for a wellness check-in each semester,
 prioritizing outreach to those with multiple simultaneous risk factors
 rather than relying on any single measurement in isolation.
